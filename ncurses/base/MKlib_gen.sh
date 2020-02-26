@@ -178,7 +178,7 @@ EOF3
 
 if test "$USE" = generated ; then
 cat >$ED4 <<EOF
-	s/^\(.*\) \(.*\) (\(.*\))\$/NCURSES_EXPORT(\1) (\2) (\3)/
+	s/^\(.*\) \(.*\) (\(.*\))\$/NCURSES_EXPORT(\1)\n\2 (\3)/
 	/attr_[sg]et.* z)/s,z),z GCC_UNUSED),
 EOF
 else
