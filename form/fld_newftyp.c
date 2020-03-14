@@ -53,7 +53,7 @@ static FIELDTYPE default_fieldtype =
 #endif
 };
 
-NCURSES_EXPORT_VAR(FIELDTYPE *)
+FORM_EXPORT_VAR(FIELDTYPE *)
   _nc_Default_FieldType = &default_fieldtype;
 
 /*---------------------------------------------------------------------------
@@ -71,7 +71,7 @@ NCURSES_EXPORT_VAR(FIELDTYPE *)
 |
 |   Return Values :  Fieldtype pointer or NULL if error occurred
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(FIELDTYPE *)
+FORM_EXPORT(FIELDTYPE *)
 new_fieldtype(bool (*const field_check) (FIELD *, const void *),
 	      bool (*const char_check) (int, const void *))
 {
@@ -121,7 +121,7 @@ new_fieldtype(bool (*const field_check) (FIELD *, const void *),
 |                    E_CONNECTED     - there are fields referencing the type
 |                    E_BAD_ARGUMENT  - invalid fieldtype pointer
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+FORM_EXPORT(int)
 free_fieldtype(FIELDTYPE *typ)
 {
   T((T_CALLED("free_fieldtype(%p)"), (void *)typ));

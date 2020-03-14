@@ -40,7 +40,7 @@
 
 MODULE_ID("$Id: p_delete.c,v 1.11 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 del_panel(PANEL * pan)
 {
   int err = OK;

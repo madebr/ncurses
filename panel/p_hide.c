@@ -39,7 +39,7 @@
 
 MODULE_ID("$Id: p_hide.c,v 1.12 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 hide_panel(register PANEL * pan)
 {
   int err = ERR;

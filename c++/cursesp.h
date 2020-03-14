@@ -43,7 +43,7 @@ extern "C" {
 #  include <panel.h>
 }
 
-class NCURSES_IMPEXP NCursesPanel
+class NCURSES_CXX_IMPEXP NCursesPanel
   : public NCursesWindow
 {
 protected:

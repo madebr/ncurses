@@ -74,7 +74,7 @@ static const char request_names[MAX_MENU_COMMAND - MIN_MENU_COMMAND + 1][14] =
 |   Return Values :  Pointer to name      - on success
 |                    NULL                 - on invalid request code
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(const char *)
+MENU_EXPORT(const char *)
 menu_request_name(int request)
 {
   T((T_CALLED("menu_request_name(%d)"), request));
@@ -96,7 +96,7 @@ menu_request_name(int request)
 |   Return Values :  Request Id       - on success
 |                    E_NO_MATCH       - request not found
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 menu_request_by_name(const char *str)
 {
   /* because the table is so small, it doesn't really hurt

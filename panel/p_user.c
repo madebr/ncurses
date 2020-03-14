@@ -39,7 +39,7 @@
 
 MODULE_ID("$Id: p_user.c,v 1.9 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 set_panel_userptr(PANEL * pan, NCURSES_CONST void *uptr)
 {
   T((T_CALLED("set_panel_userptr(%p,%p)"), (void *)pan, (NCURSES_CONST void *)uptr));
@@ -49,7 +49,7 @@ set_panel_userptr(PANEL * pan, NCURSES_CONST void *uptr)
   returnCode(OK);
 }
 
-NCURSES_EXPORT(NCURSES_CONST void *)
+PANEL_EXPORT(NCURSES_CONST void *)
 panel_userptr(const PANEL * pan)
 {
   T((T_CALLED("panel_userptr(%p)"), (const void *)pan));

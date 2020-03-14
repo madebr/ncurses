@@ -99,7 +99,7 @@ Generic_This_Type(void *arg)
 |
 |   Return Values :  Fieldtype pointer or NULL if error occurred
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(FIELDTYPE *)
+FORM_EXPORT(FIELDTYPE *)
 _nc_generic_fieldtype(bool (*const field_check) (FORM *, FIELD *, const void *),
 		      bool (*const char_check) (int, FORM *, FIELD *, const
 						void *),
@@ -220,7 +220,7 @@ GenericArgument(const FIELDTYPE *typ,
 |   Return Values :  E_OK if all went well
 |                    E_SYSTEM_ERROR if an error occurred
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+FORM_EXPORT(int)
 _nc_set_generic_fieldtype(FIELD *field,
 			  FIELDTYPE *ftyp,
 			  int (*argiterator) (void **))
@@ -275,7 +275,7 @@ _nc_set_generic_fieldtype(FIELD *field,
 |
 |   Return Values :  The fields Window or NULL on error
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(WINDOW *)
+FORM_EXPORT(WINDOW *)
 _nc_form_cursor(const FORM *form, int *pRow, int *pCol)
 {
   int code = E_SYSTEM_ERROR;

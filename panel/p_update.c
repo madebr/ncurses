@@ -40,7 +40,7 @@
 
 MODULE_ID("$Id: p_update.c,v 1.12 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(void)
+PANEL_EXPORT(void)
 NCURSES_SP_NAME(update_panels) (NCURSES_SP_DCL0)
 {
   PANEL *pan;
@@ -71,7 +71,7 @@ NCURSES_SP_NAME(update_panels) (NCURSES_SP_DCL0)
 }
 
 #if NCURSES_SP_FUNCS
-NCURSES_EXPORT(void)
+PANEL_EXPORT(void)
 update_panels(void)
 {
   NCURSES_SP_NAME(update_panels) (CURRENT_SCREEN);

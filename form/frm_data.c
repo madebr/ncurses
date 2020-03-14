@@ -45,7 +45,7 @@ MODULE_ID("$Id: frm_data.c,v 1.17 2020/02/02 23:34:34 tom Exp $")
 |   Return Values :  TRUE   - there are off-screen data behind
 |                    FALSE  - there are no off-screen data behind
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(bool)
+FORM_EXPORT(bool)
 data_behind(const FORM *form)
 {
   bool result = FALSE;
@@ -132,7 +132,7 @@ Only_Padding(WINDOW *w, int len, int pad)
 |   Return Values :  TRUE   - there are off-screen data ahead
 |                    FALSE  - there are no off-screen data ahead
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(bool)
+FORM_EXPORT(bool)
 data_ahead(const FORM *form)
 {
   bool result = FALSE;

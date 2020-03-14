@@ -39,7 +39,7 @@
 
 MODULE_ID("$Id: p_show.c,v 1.14 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 show_panel(PANEL * pan)
 {
   int err = ERR;

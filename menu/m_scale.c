@@ -51,7 +51,7 @@ MODULE_ID("$Id: m_scale.c,v 1.11 2020/02/02 23:34:34 tom Exp $")
 |                    E_BAD_ARGUMENT        - invalid menu pointer
 |                    E_NOT_CONNECTED       - no items are connected to menu
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 scale_menu(const MENU * menu, int *rows, int *cols)
 {
   T((T_CALLED("scale_menu(%p,%p,%p)"),

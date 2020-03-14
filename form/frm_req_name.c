@@ -120,7 +120,7 @@ static const char request_names[MAX_FORM_COMMAND - MIN_FORM_COMMAND + 1][13] =
 |   Return Values :  Pointer to name      - on success
 |                    NULL                 - on invalid request code
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(const char *)
+FORM_EXPORT(const char *)
 form_request_name(int request)
 {
   T((T_CALLED("form_request_name(%d)"), request));
@@ -143,7 +143,7 @@ form_request_name(int request)
 |   Return Values :  Request Id       - on success
 |                    E_NO_MATCH       - request not found
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+FORM_EXPORT(int)
 form_request_by_name(const char *str)
 {
   /* because the table is so small, it doesn't really hurt

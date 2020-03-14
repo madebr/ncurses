@@ -40,7 +40,7 @@
 
 MODULE_ID("$Id: p_hidden.c,v 1.10 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 panel_hidden(const PANEL * pan)
 {
   int rc = ERR;

@@ -89,7 +89,7 @@ root_panel(NCURSES_SP_DCL0)
   return _nc_stdscr_pseudo_panel;
 }
 
-NCURSES_EXPORT(PANEL *)
+PANEL_EXPORT(PANEL *)
 new_panel(WINDOW *win)
 {
   PANEL *pan = (PANEL *) 0;

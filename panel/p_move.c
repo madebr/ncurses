@@ -40,7 +40,7 @@
 
 MODULE_ID("$Id: p_move.c,v 1.12 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 move_panel(PANEL * pan, int starty, int startx)
 {
   int rc = ERR;

@@ -49,7 +49,7 @@ MODULE_ID("$Id: m_userptr.c,v 1.19 2020/02/02 23:34:34 tom Exp $")
 |
 |   Return Values :  E_OK         - success
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 set_menu_userptr(MENU * menu, void *userptr)
 {
   T((T_CALLED("set_menu_userptr(%p,%p)"), (void *)menu, (void *)userptr));
@@ -67,7 +67,7 @@ set_menu_userptr(MENU * menu, void *userptr)
 |   Return Values :  Value of the pointer. If no such pointer has been set,
 |                    NULL is returned
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(void *)
+MENU_EXPORT(void *)
 menu_userptr(const MENU * menu)
 {
   T((T_CALLED("menu_userptr(%p)"), (const void *)menu));

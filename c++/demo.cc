@@ -187,7 +187,7 @@ public:
 };
 
 template class MyAction<UserData>;
-template class NCURSES_IMPEXP NCursesUserItem<UserData>;
+template class NCURSES_CXX_IMPEXP NCursesUserItem<UserData>;
 
 class QuitItem : public NCursesMenuItem
 {

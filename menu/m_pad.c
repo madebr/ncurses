@@ -59,7 +59,7 @@ MODULE_ID("$Id: m_pad.c,v 1.14 2020/02/02 23:34:34 tom Exp $")
 |   Return Values :  E_OK              - success
 |                    E_BAD_ARGUMENT    - an invalid value has been passed
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 set_menu_pad(MENU * menu, int pad)
 {
   bool do_refresh = (menu != (MENU *) 0);
@@ -86,7 +86,7 @@ set_menu_pad(MENU * menu, int pad)
 |
 |   Return Values :  The pad character
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 menu_pad(const MENU * menu)
 {
   T((T_CALLED("menu_pad(%p)"), (const void *)menu));

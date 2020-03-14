@@ -140,11 +140,11 @@ extern "C" {
 #endif
 
 // Forward Declarations
-class NCURSES_IMPEXP NCursesPanel;
-class NCURSES_IMPEXP NCursesMenu;
-class NCURSES_IMPEXP NCursesForm;
+class NCURSES_CXX_IMPEXP NCursesPanel;
+class NCURSES_CXX_IMPEXP NCursesMenu;
+class NCURSES_CXX_IMPEXP NCursesForm;
 
-class NCURSES_IMPEXP NCursesException
+class NCURSES_CXX_IMPEXP NCursesException
 {
 public:
   const char *message;
@@ -178,7 +178,7 @@ public:
   }
 };
 
-class NCURSES_IMPEXP NCursesPanelException : public NCursesException
+class NCURSES_CXX_IMPEXP NCursesPanelException : public NCursesException
 {
 public:
   const NCursesPanel* p;
@@ -229,7 +229,7 @@ public:
   }
 };
 
-class NCURSES_IMPEXP NCursesMenuException : public NCursesException
+class NCURSES_CXX_IMPEXP NCursesMenuException : public NCursesException
 {
 public:
   const NCursesMenu* m;
@@ -280,7 +280,7 @@ public:
   }
 };
 
-class NCURSES_IMPEXP NCursesFormException : public NCursesException
+class NCURSES_CXX_IMPEXP NCursesFormException : public NCursesException
 {
 public:
   const NCursesForm* f;

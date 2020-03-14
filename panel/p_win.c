@@ -39,7 +39,7 @@
 
 MODULE_ID("$Id: p_win.c,v 1.7 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(WINDOW *)
+PANEL_EXPORT(WINDOW *)
 panel_window(const PANEL * pan)
 {
   T((T_CALLED("panel_window(%p)"), (const void *)pan));

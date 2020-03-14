@@ -66,7 +66,6 @@
  * using functions to access them.
  */
 #define NCURSES_PUBLIC_VAR(name) @NCURSES_WRAP_PREFIX@##name
-#define NCURSES_WRAPPED_VAR(type,name) extern type NCURSES_PUBLIC_VAR(name)(void)
 
 #include "ncurses_exports.h"
 
@@ -75,6 +74,8 @@
 #else
 # define NCURSES_IMPEXP NCURSES_EXPORT_GENERAL_IMPORT
 #endif
+
+#define NCURSES_WRAPPED_VAR(type,name) extern NCURSES_IMPEXP type NCURSES_PUBLIC_VAR(name)(void)
 
 #define NCURSES_EXPORT(type) NCURSES_IMPEXP type NCURSES_API
 #define NCURSES_EXPORT_VAR(type) NCURSES_IMPEXP type

@@ -278,14 +278,14 @@ static FIELDTYPE typeTHIS =
 #endif
 };
 
-NCURSES_EXPORT_VAR(FIELDTYPE*) TYPE_INTEGER = &typeTHIS;
+FORM_EXPORT_VAR(FIELDTYPE*) TYPE_INTEGER = &typeTHIS;
 
 #if NCURSES_INTEROP_FUNCS
 /* The next routines are to simplify the use of ncurses from
    programming languages with restictions on interop with C level
    constructs (e.g. variable access or va_list + ellipsis constructs)
 */
-NCURSES_EXPORT(FIELDTYPE *)
+FORM_EXPORT(FIELDTYPE *)
 _nc_TYPE_INTEGER(void)
 {
   return TYPE_INTEGER;

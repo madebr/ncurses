@@ -50,7 +50,7 @@ MODULE_ID("$Id: m_item_top.c,v 1.12 2020/02/02 23:34:34 tom Exp $")
 |                    E_BAD_ARGUMENT   - not a menu pointer or invalid row
 |                    E_NOT_CONNECTED  - there are no items for the menu
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 set_top_row(MENU * menu, int row)
 {
   ITEM *item;
@@ -92,7 +92,7 @@ set_top_row(MENU * menu, int row)
 |
 |   Return Values :  The row number or ERR if there is no row
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+MENU_EXPORT(int)
 top_row(const MENU * menu)
 {
   T((T_CALLED("top_row(%p)"), (const void *)menu));

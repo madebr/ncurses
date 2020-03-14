@@ -45,7 +45,7 @@ MODULE_ID("$Id: frm_scale.c,v 1.11 2020/02/02 23:34:34 tom Exp $")
 |                    E_BAD_ARGUMENT    - invalid form pointer
 |                    E_NOT_CONNECTED   - no fields connected to form
 +--------------------------------------------------------------------------*/
-NCURSES_EXPORT(int)
+FORM_EXPORT(int)
 scale_form(const FORM *form, int *rows, int *cols)
 {
   T((T_CALLED("scale_form(%p,%p,%p)"),

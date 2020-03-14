@@ -39,10 +39,10 @@
 
 #include <cursesw.h>
 
-class NCURSES_IMPEXP Soft_Label_Key_Set {
+class NCURSES_CXX_IMPEXP Soft_Label_Key_Set {
 public:
   // This inner class represents the attributes of a Soft Label Key (SLK)
-  class NCURSES_IMPEXP Soft_Label_Key {
+  class NCURSES_CXX_IMPEXP Soft_Label_Key {
     friend class Soft_Label_Key_Set;
   public:
     typedef enum { Left=0, Center=1, Right=2 } Justification;

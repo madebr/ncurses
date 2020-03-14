@@ -39,7 +39,7 @@
 
 MODULE_ID("$Id: p_top.c,v 1.7 2020/02/02 23:34:34 tom Exp $")
 
-NCURSES_EXPORT(int)
+PANEL_EXPORT(int)
 top_panel(PANEL * pan)
 {
   T((T_CALLED("top_panel(%p)"), (void *)pan));
