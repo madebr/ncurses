@@ -33,6 +33,7 @@
 curses.h
 unctrl.h
 ncurses_dll.h
+ncurses_exports.h
 
 # Support for termcap (and tic, etc.), which can be a separate library
 @ termlib

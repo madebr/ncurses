@@ -2395,6 +2395,7 @@ AC_OUTPUT( \
 	include/MKterm.h.awk \
 	include/curses.head:include/curses.h.in \
 	include/ncurses_dll.h \
+	include/ncurses_exports.h \
 	include/termcap.h \
 	include/unctrl.h \
 	$SUB_MAKEFILES \
