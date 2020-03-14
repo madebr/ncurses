@@ -9068,4 +9068,34 @@ make an error
 	fi
 fi
 fi # cf_cv_posix_visible
-])
+])dnl ---------------------------------------------------------------------------
+dnl CF_WITH_FVISIBILITY version: 1 updated: 2020/03/14 10:53:46
+dnl ----------------
+dnl Check whether the compiler understands -fvisibility=hidden
+AC_DEFUN([CF_WITH_FVISIBILITY],[
+AC_MSG_CHECKING(if you want to use fvisibility)
+NCURSES_EXPORT=
+AC_ARG_WITH(fvisibility,
+	[  --with-fvisibility      use -fvisibility=hidden],
+	[cf_with_fvisibility=$withval],
+	[cf_with_fvisibility=no])
+
+if test "$cf_with_fvisibility" = yes; then
+    _save_cflags="$CFLAGS"
+    CFLAGS=-fvisibility=hidden
+    AC_TRY_COMPILE([],[
+__attribute__ ((visibility("default"))) int somefunc() {return 42;}
+],
+    [cf_fvisibility_set_ok=yes],
+    [AC_MSG_ERROR([The compiler does not support the -fvisibility argument])])
+    CFLAGS=$_save_cflags
+    if test "$cf_with_fvisibility" = yes; then
+        CF_ADD_CFLAGS([-fvisibility=hidden]) dnl FIXME: also need to test CXX if cxx enabled + CF_ADD_CXXFLAGS
+        NCURSES_EXPORT="__attribute__ ((visibility(\"default\")))"
+    fi
+else
+    cf_fvisibility_set_ok=no
+fi
+AC_SUBST(NCURSES_EXPORT)
+AC_MSG_RESULT($cf_fvisibility_set_ok)
+])dnl

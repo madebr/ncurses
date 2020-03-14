@@ -1083,6 +1083,8 @@ AC_ARG_WITH(rcs-ids,
 AC_MSG_RESULT($with_rcs_ids)
 test "x$with_rcs_ids" = xyes && AC_DEFINE(USE_RCS_IDS,1,[Define to 1 to compile-in RCS identifiers])
 
+CF_WITH_FVISIBILITY
+
 ###############################################################################
 CF_MAN_PAGES([ captoinfo clear infocmp infotocap reset tabs tic toe tput tset ])
 
