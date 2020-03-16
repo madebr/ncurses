@@ -432,7 +432,7 @@ BEGIN		{
 		print "#define NCURSES_ATTR_T int"
 		print "#include <ncurses_cfg.h>"
 		print ""
-		print "#undef NCURSES_NOMACROS	/* _this_ file uses macros */"
+		print "#define NCURSES_NOMACROS	/* _this_ file uses macros */"
 		print ""
 		print "#include <curses.priv.h>"
 		print ""
