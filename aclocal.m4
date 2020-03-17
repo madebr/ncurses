@@ -8506,7 +8506,7 @@ if test "x$with_pcre2" != xno ; then
 	esac
 
 	# either way, check for the library header files
-	AC_CHECK_HEADERS(pcre2-posix.h pcreposix.h)
+	AC_CHECK_HEADERS(pcre2posix.h pcreposix.h)
 fi
 ])dnl
 dnl ---------------------------------------------------------------------------
