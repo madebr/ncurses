@@ -51,7 +51,7 @@
 MODULE_ID("$Id: comp_parse.c,v 1.109 2020/02/02 23:34:34 tom Exp $")
 
 static void sanity_check2(TERMTYPE2 *, bool);
-NCURSES_IMPEXP void NCURSES_API(*_nc_check_termtype2) (TERMTYPE2 *, bool) = sanity_check2;
+NCURSES_IMPEXP void (NCURSES_API *_nc_check_termtype2) (TERMTYPE2 *, bool) = sanity_check2;
 
 static void fixup_acsc(TERMTYPE2 *, int);
 
