@@ -58,7 +58,7 @@
 MODULE_ID("$Id: win_driver.c,v 1.63 2020/02/02 23:34:34 tom Exp $")
 
 #ifndef __GNUC__
-#  error We need GCC to compile for MinGW
+//#  error We need GCC to compile for MinGW
 #endif
 
 #define WINMAGIC NCDRV_MAGIC(NCDRV_WINCONSOLE)
@@ -262,7 +262,7 @@ static BOOL
 con_write16(TERMINAL_CONTROL_BLOCK * TCB, int y, int x, cchar_t *str, int limit)
 {
     int actual = 0;
-    CHAR_INFO ci[limit];
+    CHAR_INFO * ci = (CHAR_INFO*) _alloca(sizeof(CHAR_INFO) * limit);
     COORD loc, siz;
     SMALL_RECT rec;
     int i;
@@ -311,7 +311,7 @@ con_write16(TERMINAL_CONTROL_BLOCK * TCB, int y, int x, cchar_t *str, int limit)
 static BOOL
 con_write8(TERMINAL_CONTROL_BLOCK * TCB, int y, int x, chtype *str, int n)
 {
-    CHAR_INFO ci[n];
+    CHAR_INFO * ci = (CHAR_INFO*) _alloca(sizeof(CHAR_INFO) * n);
     COORD loc, siz;
     SMALL_RECT rec;
     int i;
@@ -510,7 +510,7 @@ wcon_doupdate(TERMINAL_CONTROL_BLOCK * TCB)
 	if ((CurScreen(sp)->_clear || NewScreen(sp)->_clear)) {
 	    int x;
 #if USE_WIDEC_SUPPORT
-	    cchar_t empty[Width];
+	    cchar_t * empty = (cchar_t*) _alloca(sizeof(cchar_t) * Width);
 	    wchar_t blank[2] =
 	    {
 		L' ', L'\0'
@@ -519,7 +519,7 @@ wcon_doupdate(TERMINAL_CONTROL_BLOCK * TCB)
 	    for (x = 0; x < Width; x++)
 		setcchar(&empty[x], blank, 0, 0, 0);
 #else
-	    chtype empty[Width];
+        chtype * empty = (chtype*) _alloca(sizeof(chtype) * Width);
 
 	    for (x = 0; x < Width; x++)
 		empty[x] = ' ';
@@ -675,8 +675,8 @@ wcon_dobeepflash(TERMINAL_CONTROL_BLOCK * TCB,
     int max_cells = (high * wide);
     int i;
 
-    CHAR_INFO this_screen[max_cells];
-    CHAR_INFO that_screen[max_cells];
+    CHAR_INFO * this_screen = (CHAR_INFO*) _alloca(sizeof(CHAR_INFO) * max_cells);
+    CHAR_INFO * that_screen = (CHAR_INFO*) _alloca(sizeof(CHAR_INFO) * max_cells);
     COORD this_size;
     SMALL_RECT this_region;
     COORD bufferCoord;
