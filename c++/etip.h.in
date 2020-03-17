@@ -341,7 +341,6 @@ using std::endl;
 #  else
 #     include <iostream.h>
 #  endif
-   extern "C" void exit(int);
 #endif
 
 inline void THROW(const NCursesException *e) {
