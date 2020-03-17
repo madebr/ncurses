@@ -71,7 +71,7 @@
 #  include <sys/select.h>
 # endif
 #endif
-#ifdef _WIN32
+#if HAVE_SYS_TIME_H
 #  include <sys/time.h>
 #endif
 #undef CUR

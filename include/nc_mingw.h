@@ -52,7 +52,9 @@
 #undef gettimeofday
 #define gettimeofday(tv,tz) _nc_gettimeofday(tv,tz)
 
+#if HAVE_SYS_TIME_H
 #include <sys/time.h>		/* for struct timeval */
+#endif
 
 extern int _nc_gettimeofday(struct timeval *, void *);
 
